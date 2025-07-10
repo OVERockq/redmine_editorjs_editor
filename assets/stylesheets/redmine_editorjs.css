@@ -1,0 +1,122 @@
+/* Editor.js 컨테이너 */
+.editorjs-editor {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  min-height: 400px;
+  padding: 1rem;
+}
+
+/* 도구 모음 */
+.ce-toolbar__content {
+  max-width: calc(100% - 80px) !important;
+}
+
+.ce-toolbar__actions {
+  right: -5px !important;
+}
+
+/* 블록 컨텐츠 */
+.ce-block__content {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* 인라인 도구 모음 */
+.ce-inline-toolbar {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 3px 15px -3px rgba(13, 20, 33, 0.13);
+}
+
+.ce-inline-toolbar__buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* 저장 표시기 */
+#save-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 10000;
+  transition: opacity 0.3s ease;
+}
+
+/* 이미지 블록 */
+.image-tool {
+  --bg-color: #fff;
+  --border-color: #e1e4e8;
+}
+
+.image-tool__image {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.image-tool__caption {
+  margin-top: 0.5rem;
+}
+
+/* 코드 블록 */
+.ce-code {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+/* 테이블 */
+.tc-table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.tc-table th,
+.tc-table td {
+  border: 1px solid #e1e4e8;
+  padding: 0.5rem;
+}
+
+/* 체크리스트 */
+.cdx-checklist__item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.cdx-checklist__item-checkbox {
+  margin-right: 0.5rem;
+}
+
+/* 인용구 */
+.cdx-quote {
+  padding-left: 1rem;
+  border-left: 4px solid #e1e4e8;
+  margin: 1rem 0;
+}
+
+/* 임베드 */
+.embed-tool__content {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* 반응형 조정 */
+@media (max-width: 650px) {
+  .ce-toolbar__content {
+    max-width: calc(100% - 40px) !important;
+  }
+  
+  .ce-block__content {
+    padding: 0 10px;
+  }
+} 

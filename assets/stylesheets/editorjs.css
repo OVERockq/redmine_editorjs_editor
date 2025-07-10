@@ -1,0 +1,20 @@
+/* Editor.js 컨테이너 스타일 */
+.editorjs-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Redmine의 기본 레이아웃에 맞게 너비 제한 해제 */
+.ce-block__content,
+.ce-toolbar__content {
+  max-width: none;
+}
+
+/* 에디터 하단 여백 강제 조정 */
+.codex-editor__redactor {
+  padding-bottom: 40px !important;
+} 

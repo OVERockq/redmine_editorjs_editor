@@ -1,0 +1,19 @@
+<p>
+  <label><%= l(:setting_replace_issues) %></label>
+  <%= check_box_tag 'settings[replace_issues]', 'true', @settings['replace_issues'] == 'true' %>
+</p>
+
+<p>
+  <label><%= l(:setting_replace_wiki) %></label>
+  <%= check_box_tag 'settings[replace_wiki]', 'true', @settings['replace_wiki'] == 'true' %>
+</p>
+
+<p>
+  <label><%= l(:setting_replace_forums) %></label>
+  <%= check_box_tag 'settings[replace_forums]', 'true', @settings['replace_forums'] == 'true' %>
+</p>
+
+<p>
+  <label><%= l(:setting_replace_comments) %></label>
+  <%= check_box_tag 'settings[replace_comments]', 'true', @settings['replace_comments'] == 'true' %>
+</p> 

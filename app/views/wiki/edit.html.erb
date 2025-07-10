@@ -1,0 +1,50 @@
+<% content_for :header_tags do %>
+  <%= javascript_include_tag 'redmine_editorjs', plugin: 'redmine_editorjs_editor' %>
+  <%= stylesheet_link_tag 'redmine_editorjs', plugin: 'redmine_editorjs_editor' %>
+<% end %>
+
+<%= form_with model: @page, url: { action: 'update', id: @page.title }, method: :put, local: true do |f| %>
+  <% if @page.content.present? %>
+    <%= f.hidden_field :version, value: @page.content.version %>
+  <% end %>
+  
+  <div class="wiki-edit">
+    <%= f.text_area :text, id: 'content_text', class: 'wiki-edit', rows: 25, accesskey: accesskey(:edit), value: @content.try(:text) %>
+  </div>
+
+  <div class="form-actions">
+    <%= submit_tag l(:button_save), class: 'button-positive' %>
+    <%= link_to l(:button_cancel), { action: 'show', id: @page.title }, class: 'button' %>
+  </div>
+<% end %>
+
+<% content_for :header_tags do %>
+  <style>
+    .editorjs-editor {
+      min-height: 400px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    #save-indicator {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      border-radius: 4px;
+      z-index: 1000;
+    }
+
+    .ce-block__content {
+      max-width: 100%;
+    }
+
+    .ce-toolbar__content {
+      max-width: calc(100% - 80px);
+    }
+  </style>
+<% end %> 
